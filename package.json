@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "test-e2e": "cypress open"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.10",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
+    "cypress": "^10.4.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
     "vitest": "^0.20.3",
