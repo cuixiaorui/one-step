@@ -8,7 +8,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test-e2e": "cypress open"
+    "test-e2e": "cypress open --e2e",
+    "test-component":"cypress open --component"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.10",
