@@ -2,7 +2,7 @@
 
 vue3 开发技术栈 一步到位 开箱即用
 
-## Feature
+## Features
 
 集成了以下技术栈
 
