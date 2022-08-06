@@ -10,6 +10,18 @@ describe("Home.vue", () => {
     setActivePinia(createPinia());
   });
 
+  it("should get mount component ", async () => {
+    // 使用 then 来获取  比较的繁琐 可读性还非常的差 
+    // cy.mount(Home).then(async () => { 
+    //   console.log(Cypress.vue);
+    //  })
+
+    // 使用 promisify 来解决
+    const wrapper = await cy.mount(Home).promisify()
+    console.log("warpper---------",wrapper);
+
+  });
+
   it("to about", () => {
     const router = createRouter({
       routes: routes,
@@ -20,11 +32,11 @@ describe("Home.vue", () => {
     cy.contains("to about")
       .click()
       .then(() => {
-        const router = Cypress.vue.$router
-        const route = Cypress.vue.$route
-        console.log(router)
-        console.log(route)
-        expect(route.name).to.eql('about')
+        const router = Cypress.vue.$router;
+        const route = Cypress.vue.$route;
+        expect(route.name).to.eql("about");
+        console.log((Cypress.vueWrapper.vm as any).show());
+        // console.log((Cypress.vue.$.exposeProxy as any).show())
       });
   });
 });

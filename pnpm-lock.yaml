@@ -4,6 +4,7 @@ specifiers:
   '@vitejs/plugin-vue': ^3.0.0
   ant-design-vue: ^3.2.10
   cypress: ^10.4.0
+  cypress-promise: ^1.1.0
   pinia: ^2.0.17
   typescript: ^4.6.4
   vite: ^3.0.0
@@ -21,6 +22,7 @@ dependencies:
 devDependencies:
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.0.1_vite@3.0.4+vue@3.2.37
   cypress: registry.npmmirror.com/cypress/10.4.0
+  cypress-promise: registry.npmmirror.com/cypress-promise/1.1.0
   typescript: registry.npmmirror.com/typescript/4.7.4
   vite: registry.npmmirror.com/vite/3.0.4
   vitest: registry.npmmirror.com/vitest/0.20.3
@@ -728,6 +730,12 @@ packages:
     name: csstype
     version: 2.6.20
     dev: false
+
+  registry.npmmirror.com/cypress-promise/1.1.0:
+    resolution: {integrity: sha512-DhIf5PJ/a0iY+Yii6n7Rbwq+9TJxU4pupXYzf9mZd8nPG0AzQrj9i+pqINv4xbI2EV1p+PKW3maCkR7oPG4GrA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cypress-promise/-/cypress-promise-1.1.0.tgz}
+    name: cypress-promise
+    version: 1.1.0
+    dev: true
 
   registry.npmmirror.com/cypress/10.4.0:
     resolution: {integrity: sha512-OM7F8MRE01SHQRVVzunid1ZK1m90XTxYnl+7uZfIrB4CYqUDCrZEeSyCXzIbsS6qcaijVCAhqDL60SxG8N6hew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cypress/-/cypress-10.4.0.tgz}
