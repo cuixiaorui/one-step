@@ -1,4 +1,4 @@
-import Home from "../../src/views/Home.vue";
+import Home from '@/views/Home.vue'
 import { createMemoryHistory, createRouter } from "vue-router";
 
 import { setActivePinia, createPinia } from "pinia";
