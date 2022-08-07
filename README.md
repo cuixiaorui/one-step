@@ -15,11 +15,11 @@ vue3 开发技术栈 一步到位 开箱即用
 - [x] ant design
 - [x] cypress
 - [x] cypress-component-test
+- [x] alias
 - [ ] story-book
 - [ ] axios
 - [ ] ci && cd
 - [ ] lint + eslint + prettier
-- [ ] alias
 
 
 ## 提需求
