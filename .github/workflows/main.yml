@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  e2e-test:
+  unit-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,9 +26,5 @@ jobs:
 
       - run: pnpm install
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          build: pnpm build
-          start: pnpm preview
-          browser: chrome
+      - name: Run unit tests
+        run: pnpm run test-unit-ci
