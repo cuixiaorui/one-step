@@ -8,16 +8,25 @@ on:
       - main
 
 jobs:
-  cypress-run:
+  e2e-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
+      - uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Set node version to 16
+        uses: actions/setup-node@v2
         with:
-          build: pnpm build
-          start: pnpm preview
-          browser: chrome
+          node-version: 16
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - name: Cypress run
+            uses: cypress-io/github-action@v4
+            with:
+              build: pnpm build
+              start: pnpm preview
+              browser: chrome
