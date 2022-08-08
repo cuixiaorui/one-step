@@ -12,23 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 6.32.4
-
-      - name: Set node version to 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          cache: 'pnpm'
-
-      - run: pnpm install
-
-      - name: build
-        run: pnpm build
-
-      - uses: amondnet/vercel-action@v20 #deploy
+      - uses: amondnet/vercel-action@v20 
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} 
           github-token: ${{ secrets.GITHUB_TOKEN }}  
