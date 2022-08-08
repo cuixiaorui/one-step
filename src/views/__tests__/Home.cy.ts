@@ -2,7 +2,7 @@ import Home from '@/views/Home.vue'
 import { createMemoryHistory, createRouter } from "vue-router";
 
 import { setActivePinia, createPinia } from "pinia";
-import { routes } from "../../src/router";
+import { routes } from "../../router";
 
 // 重点描述了应该如何测试用了 pinia 和 vue-router 的组件
 describe("Home.vue", () => {
@@ -35,8 +35,6 @@ describe("Home.vue", () => {
         const router = Cypress.vue.$router;
         const route = Cypress.vue.$route;
         expect(route.name).to.eql("about");
-        console.log((Cypress.vueWrapper.vm as any).show());
-        // console.log((Cypress.vue.$.exposeProxy as any).show())
       });
   });
 });
