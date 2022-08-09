@@ -9,6 +9,7 @@ on:
 
 jobs:
   unit-test:
+    name: unit-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,6 +31,7 @@ jobs:
         run: pnpm run test-unit-ci
 
   component-test:
+    name: component-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -52,6 +54,7 @@ jobs:
     
 
   e2e-test:
+    name: e2e-test 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -75,6 +78,8 @@ jobs:
           start: pnpm preview
           browser: chrome
   deploy:
+    name: deploy
+    needs: [unit-test, component-test, e2e-test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
