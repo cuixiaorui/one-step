@@ -19,7 +19,7 @@ describe("example to-do app", () => {
     // we include it in our beforeEach function so that it runs before each test
     // todo 
     // 后面需要基于环境来区分不同的 host
-    cy.visit("http://127.0.0.1:4173/#/");
+    cy.visit("/");
   });
 
   it('should be show one-step', () => {

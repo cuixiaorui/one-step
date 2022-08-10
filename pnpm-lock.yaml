@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^3.0.0
   ant-design-vue: ^3.2.10
+  cross-env: ^7.0.3
   cypress: ^10.4.0
   cypress-promise: ^1.1.0
   path: ^0.12.7
@@ -22,6 +23,7 @@ dependencies:
 
 devDependencies:
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.0.1_vite@3.0.4+vue@3.2.37
+  cross-env: registry.npmmirror.com/cross-env/7.0.3
   cypress: registry.npmmirror.com/cypress/10.4.0
   cypress-promise: registry.npmmirror.com/cypress-promise/1.1.0
   path: registry.npmmirror.com/path/0.12.7
@@ -714,6 +716,16 @@ packages:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-util-is/-/core-util-is-1.0.2.tgz}
     name: core-util-is
     version: 1.0.2
+    dev: true
+
+  registry.npmmirror.com/cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cross-env/-/cross-env-7.0.3.tgz}
+    name: cross-env
+    version: 7.0.3
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: registry.npmmirror.com/cross-spawn/7.0.3
     dev: true
 
   registry.npmmirror.com/cross-spawn/7.0.3:
