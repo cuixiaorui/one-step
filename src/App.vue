@@ -6,6 +6,7 @@
       一步到位 直接开写你的应用 项目配置全部帮你搞定
     </p>
     <RouterView></RouterView>
+    <div>这是一个测试</div>
   </div>
 </template>
 
