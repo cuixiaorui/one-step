@@ -71,7 +71,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         env:
-          NODE_ENV: production
+          NODE_ENV: ci
         with:
           build: pnpm build
           start: pnpm preview
