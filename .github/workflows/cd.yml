@@ -66,12 +66,10 @@ jobs:
         with:
           node-version: 16
           cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
 
       - name: Cypress run
         uses: cypress-io/github-action@v4
-        env:
-          NODE_ENV: production
         with:
           build: pnpm build
           start: pnpm preview
