@@ -7,11 +7,13 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "test-e2e": "cross-env NODE_ENV=developer cypress open --e2e",
+    "test": "pnpm test-unit-run && pnpm test-component-run && pnpm test-e2e-run",
+    "test-unit": "vitest",
     "test-component": "cypress open --component",
-    "test-unit-ci": "vitest --run",
-    "test-component-ci": "cypress run --component"
+    "test-e2e": "cross-env NODE_ENV=developer cypress open --e2e",
+    "test-unit-run": "vitest --run",
+    "test-component-run": "cypress run --component",
+    "test-e2e-run": "cross-env NODE_ENV=developer cypress run --e2e"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.10",
